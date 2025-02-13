@@ -1,0 +1,2783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="PerformanceWS" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="pauseGui" elementType="Argument">
+            <stringProp name="Argument.name">pauseGui</stringProp>
+            <stringProp name="Argument.value">2000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="csvFileGui" elementType="Argument">
+            <stringProp name="Argument.name">csvFileGui</stringProp>
+            <stringProp name="Argument.value">C:\\Users\\DalsinTh\\OneDrive - Government of Ontario\\Documents\\Requests\\TD250127-01-AddFileNotes-emailChange\\Dev2emailTest.csv</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="envGui" elementType="Argument">
+            <stringProp name="Argument.name">envGui</stringProp>
+            <stringProp name="Argument.value">Dev2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ConfigTestElement guiclass="SimpleConfigGui" testclass="ConfigTestElement" testname="DOTO" enabled="true"/>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Endpoints" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="srvDevApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvDevApicIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.dev.apic.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvDevDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvDevDpIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.dev.dp.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvDevApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvDevApicPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.dev.apic.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvDevDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvDevDpPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.dev.dp.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvStageApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvStageApicIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.stg.apic.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvStageDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvStageDpIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.stg.dp.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvStageApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvStageApicPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.stg.apic.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvStageDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvStageDpPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.stg.dp.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvUatApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvUatApicIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.uat.apic.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvUatDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvUatDpIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.uat.dp.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvUatApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvUatApicPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.uat.apic.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvUatDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvUatDpPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.uat.dp.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthDev1Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthDev1Dp</stringProp>
+            <stringProp name="Argument.value">/path/dev1/dp</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthStage1Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthStage1Dp</stringProp>
+            <stringProp name="Argument.value">/path/stg1/dp</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthUat1Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthUat1Dp</stringProp>
+            <stringProp name="Argument.value">/path/uat1/dp</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthDev2Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthDev2Dp</stringProp>
+            <stringProp name="Argument.value">/path/dev2/dp</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthStage2Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthStage2Dp</stringProp>
+            <stringProp name="Argument.value">/path/stg2/dp</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthUat2Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthUat2Dp</stringProp>
+            <stringProp name="Argument.value">/path/uat2/dp</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthDev1ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthDev1ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/dev1/apic/intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthDev2ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthDev2ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/dev2/apic/intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthDev1ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthDev1ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/dev1/apic/partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthDev2ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthDev2ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/dev2/apic/partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthUat1ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthUat1ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/uat1/apic/partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthUat1ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthUat1ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/uat1/apic/intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthUat2ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthUat2ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/uat2/apic/partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthUat2ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthUat2ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/uat2/apic/intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthStage1ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthStage1ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/stg1/apic/intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthStage2ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthStage2ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/stg2/apic/intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthStage1ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthStage1ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/stg1/apic/partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthStage2ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthStage2ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/stg2/apic/partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvProdApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvProdApicIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.prod.apic.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvProdDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">srvProdDpIntra</stringProp>
+            <stringProp name="Argument.value">url.connect.prod.dp.intra</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvProdApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvProdApicPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.prod.apic.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="srvProdDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">srvProdDpPartner</stringProp>
+            <stringProp name="Argument.value">url.connect.prod.dp.partner</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthProd1Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthProd1Dp</stringProp>
+            <stringProp name="Argument.value">/path/prod1/dp/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthProd2Dp" elementType="Argument">
+            <stringProp name="Argument.name">pthProd2Dp</stringProp>
+            <stringProp name="Argument.value">/path/prod2/dp/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthProd1ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthProd1ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/prod1/apic/intra/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthProd2ApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">pthProd2ApicIntra</stringProp>
+            <stringProp name="Argument.value">/path/prod2/apic/intra/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthProd1ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthProd1ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/prod1/apic/partner/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="pthProd2ApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">pthProd2ApicPartner</stringProp>
+            <stringProp name="Argument.value">/path/prod2/apic/partner/</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidDevDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">cidDevDpPartner</stringProp>
+            <stringProp name="Argument.value">a8300657338e846b81f45f1e2f5d62c1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidDevDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">cidDevDpIntra</stringProp>
+            <stringProp name="Argument.value">963f4cb3868f9b91df28fb0e15c2f287</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidDevApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">cidDevApicPartner</stringProp>
+            <stringProp name="Argument.value">2ebc4a12f97692f8b3d28fc7377fdc8d</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidDevApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">cidDevApicIntra</stringProp>
+            <stringProp name="Argument.value">b2fdbb05805982c98bc3ed784dff7ea3</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidStageDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">cidStageDpPartner</stringProp>
+            <stringProp name="Argument.value">c31b16dee764a1a75c0e870be051e56f</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidStageDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">cidStageDpIntra</stringProp>
+            <stringProp name="Argument.value">6b9d9e96816918d82a69de42ced1f5e4</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidStageApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">cidStageApicPartner</stringProp>
+            <stringProp name="Argument.value">65dcf6e6fa1c83226148ddec391995f7</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidStageApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">cidStageApicIntra</stringProp>
+            <stringProp name="Argument.value">74b241069d46e4dc28c25ef3d631392d</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidUatDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">cidUatDpPartner</stringProp>
+            <stringProp name="Argument.value">b24be45c46d51cfb32b59e091f7bdcf9</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidUatDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">cidUatDpIntra</stringProp>
+            <stringProp name="Argument.value">d959d774c44e91603cdb7c30e77de45f</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidUatApicPartner" elementType="Argument">
+            <stringProp name="Argument.name">cidUatApicPartner</stringProp>
+            <stringProp name="Argument.value">2aa0aa8984c9f06b6a1aaca1b21db805</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidUatApicIntra" elementType="Argument">
+            <stringProp name="Argument.name">cidUatApicIntra</stringProp>
+            <stringProp name="Argument.value">8e19321c576cbd60cc7be08a7c708985</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidProdDpIntra" elementType="Argument">
+            <stringProp name="Argument.name">cidProdDpIntra</stringProp>
+            <stringProp name="Argument.value">e0c20f6183e33d9d13e80bdbe3a584c9</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="cidProdDpPartner" elementType="Argument">
+            <stringProp name="Argument.name">cidProdDpPartner</stringProp>
+            <stringProp name="Argument.value">9499815c789d1cc7edd1f28059b9029c</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Test Config" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="EnviroSet" elementType="Argument">
+            <stringProp name="Argument.name">EnviroSet</stringProp>
+            <stringProp name="Argument.value">Uat</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Pick from {Dev,Stage,Uat}</stringProp>
+          </elementProp>
+          <elementProp name="GatewaySet" elementType="Argument">
+            <stringProp name="Argument.name">GatewaySet</stringProp>
+            <stringProp name="Argument.value">Apic</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">Pick from {Apic,Dp}</stringProp>
+          </elementProp>
+          <elementProp name="EnvInstance" elementType="Argument">
+            <stringProp name="Argument.name">EnvInstance</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.desc">Pick from {1,2}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testerEmailPrefix" elementType="Argument">
+            <stringProp name="Argument.name">testerEmailPrefix</stringProp>
+            <stringProp name="Argument.value">thomas.dalsin</stringProp>
+            <stringProp name="Argument.desc">Where do you want OBR-generated emails to go? Leave out the @ontario.ca</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testerFirstName" elementType="Argument">
+            <stringProp name="Argument.name">testerFirstName</stringProp>
+            <stringProp name="Argument.value">Thomas</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testerLastName" elementType="Argument">
+            <stringProp name="Argument.name">testerLastName</stringProp>
+            <stringProp name="Argument.value">Dalsin</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testRunID" elementType="Argument">
+            <stringProp name="Argument.name">testRunID</stringProp>
+            <stringProp name="Argument.value">${__time(yyyyMMdd&apos;T&apos;HHmmssSSS,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="version" elementType="Argument">
+            <stringProp name="Argument.name">version</stringProp>
+            <stringProp name="Argument.value">current</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="notesPauseTime" elementType="Argument">
+            <stringProp name="Argument.name">notesPauseTime</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables - Dates and Address" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="dtToday" elementType="Argument">
+            <stringProp name="Argument.name">dtToday</stringProp>
+            <stringProp name="Argument.value">${__time(yyyy-MM-dd,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dtYesterday" elementType="Argument">
+            <stringProp name="Argument.name">dtYesterday</stringProp>
+            <stringProp name="Argument.value">${__timeShift(yyyy-MM-dd,,-P1D,,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dtTomorrow" elementType="Argument">
+            <stringProp name="Argument.name">dtTomorrow</stringProp>
+            <stringProp name="Argument.value">${__timeShift(yyyy-MM-dd,,P1D,,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dtInTwoWeeks" elementType="Argument">
+            <stringProp name="Argument.name">dtInTwoWeeks</stringProp>
+            <stringProp name="Argument.value">${__timeShift(yyyy-MM-dd,,P14D,,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="dtOverAYearAgo" elementType="Argument">
+            <stringProp name="Argument.name">dtOverAYearAgo</stringProp>
+            <stringProp name="Argument.value">${__timeShift(yyyy-MM-dd,,-P367D,,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="intOCN" elementType="Argument">
+            <stringProp name="Argument.name">intOCN</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="CorpCount" elementType="Argument">
+            <stringProp name="Argument.name">CorpCount</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tsThisSecond" elementType="Argument">
+            <stringProp name="Argument.name">tsThisSecond</stringProp>
+            <stringProp name="Argument.value">${__time(hhmmss,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="tsTodayNums" elementType="Argument">
+            <stringProp name="Argument.name">tsTodayNums</stringProp>
+            <stringProp name="Argument.value">${__time(yyyyMMdd,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="envString" elementType="Argument">
+            <stringProp name="Argument.name">envString</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="clientId" elementType="Argument">
+            <stringProp name="Argument.name">clientId</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="callingThread" elementType="Argument">
+            <stringProp name="Argument.name">callingThread</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="scriptPath" elementType="Argument">
+            <stringProp name="Argument.name">scriptPath</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="consecutiveFailures" elementType="Argument">
+            <stringProp name="Argument.name">consecutiveFailures</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="failLimit" elementType="Argument">
+            <stringProp name="Argument.name">failLimit</stringProp>
+            <stringProp name="Argument.value">20</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="sentCount" elementType="Argument">
+            <stringProp name="Argument.name">sentCount</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <SetupThreadGroup guiclass="SetupThreadGroupGui" testclass="SetupThreadGroup" testname="Config - setUp Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </SetupThreadGroup>
+      <hashTree>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Parameterize Properties - JSR223 Sampler" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">import org.apache.jmeter.services.FileServer
+//============== Define the file path =================
+
+def testPlanFileDir = FileServer.getFileServer().getBaseDir()
+props.put(&quot;scriptPath&quot;,testPlanFileDir)
+log.info(&quot;script path set to: &quot;+props.get(&quot;scriptPath&quot;))
+
+//============== Define the pause time =================
+
+if (props.get(&quot;notesPauseTime&quot;)==null) {
+	log.info(&quot;Pause not set. Setting pause to ${pauseGui} milliseconds&quot;)
+	props.put(&quot;notesPauseTime&quot;,&quot;${pauseGui}&quot;)
+} else {
+     log.info(&quot;Pause defined as [&quot;+props.get(&quot;notesPauseTime&quot;)+&quot;]&quot;)
+}
+log.info(&quot;PAUSE = &quot;+props.get(&quot;notesPauseTime&quot;)+&quot; milliseconds&quot;)
+
+//============== Define the max count =================
+
+if (props.get(&quot;sendCount&quot;)==null) {
+	log.info(&quot;sendCount not set. Setting sendCount to -1&quot;)
+	props.put(&quot;sendCount&quot;,&quot;-1&quot;)
+} else {
+     log.info(&quot;sendCount defined as [&quot;+props.get(&quot;sendCount&quot;)+&quot;]&quot;)
+}
+log.info(&quot;SENDCOUNT = &quot;+props.get(&quot;sendCount&quot;)+&quot; entities&quot;)
+
+//============== Define the CSV file =================
+
+if (props.get(&quot;dataFileCsv&quot;)==null || props.get(&quot;dataFileCsv&quot;).length() &lt; 1) {
+	log.info(&quot;Data file not set. Setting to ${csvFileGui}&quot;)
+	props.put(&quot;dataFileCsv&quot;,&quot;${csvFileGui}&quot;)
+} else {
+     log.info(&quot;Data file defined [&quot;+props.get(&quot;dataFileCsv&quot;)+&quot;] with length &quot;+props.get(&quot;dataFileCsv&quot;).length())
+}
+def fCsvData = new File(props.get(&quot;dataFileCsv&quot;))
+log.info(&quot;DATA FILE = &quot;+props.get(&quot;dataFileCsv&quot;)+&quot; (size=&quot;+fCsvData.length()+&quot;)&quot;)
+
+//============== Define the Environment =================
+
+if (props.get(&quot;envParam&quot;)==null) {
+	log.info(&quot;Environment not set. Setting to ${envGui}&quot;)
+	props.put(&quot;envParam&quot;,&quot;${envGui}&quot;)
+} else {
+     log.info(&quot;Environment defined [&quot;+props.get(&quot;envParam&quot;)+&quot;]&quot;)
+}
+log.info(&quot;Environment = &quot;+props.get(&quot;envParam&quot;))
+
+// --- Environment Instance ---
+if (&quot;123&quot;.contains(props.get(&quot;envParam&quot;).reverse().take(1))){
+	vars.put(&quot;EnvInstance&quot;,props.get(&quot;envParam&quot;).reverse().take(1))
+	props.put(&quot;EnvInstance&quot;,props.get(&quot;envParam&quot;).reverse().take(1))
+} else {
+	log.error(&quot;ENVIRONMENT STRING [&quot;+props.get(&quot;envParam&quot;)+&quot;] DOES NOT SPECIFY 1 OR 2 OR 3 (could be Production)&quot;)
+	props.put(&quot;EnvInstance&quot;,&quot;1&quot;)
+}
+
+// --- Environment Set ---
+switch( props.get(&quot;envParam&quot;).toUpperCase().take(3) ){
+	case &quot;DEV&quot;:
+	vars.put(&quot;EnviroSet&quot;,&quot;Dev&quot;)
+	props.put(&quot;EnviroSet&quot;,&quot;Dev&quot;)
+	break;
+	case &quot;STA&quot;:
+	vars.put(&quot;EnviroSet&quot;,&quot;Stage&quot;)
+	props.put(&quot;EnviroSet&quot;,&quot;Stage&quot;)
+	break;
+	case &quot;STG&quot;:
+	vars.put(&quot;EnviroSet&quot;,&quot;Stage&quot;)
+	props.put(&quot;EnviroSet&quot;,&quot;Stage&quot;)
+	break;
+	case &quot;UAT&quot;:
+	vars.put(&quot;EnviroSet&quot;,&quot;Uat&quot;)
+	props.put(&quot;EnviroSet&quot;,&quot;Uat&quot;)
+	break;
+	case &quot;PRO&quot;:
+	vars.put(&quot;EnviroSet&quot;,&quot;Prod&quot;)
+	props.put(&quot;EnviroSet&quot;,&quot;Prod&quot;)
+	break;
+	case &quot;PRD&quot;:
+	vars.put(&quot;EnviroSet&quot;,&quot;Prod&quot;)
+	props.put(&quot;EnviroSet&quot;,&quot;Prod&quot;)
+	break;
+	default:
+	log.error(&quot;ENVIRONMENT SET [&quot; + props.get(&quot;envParam&quot;) + &quot;] DOES NOT SPECIFY DEV, STAGING, UAT, OR PRODUCTION&quot;)
+	break;
+}
+
+//========== Define the Client ID ==============
+
+if (props.get(&quot;ibmClientId&quot;)==null) {
+	log.info(&quot;ibmClientId not set. using default.&quot;)
+	props.put(&quot;ibmClientId&quot;,&quot;&quot;+vars.get(&quot;cid&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Intra&quot;))
+} else {
+     log.info(&quot;IBM client ID defined as [&quot;+props.get(&quot;ibmClientId&quot;)+&quot;]&quot;)
+}
+log.info(&quot;CLIENT ID = &quot;+props.get(&quot;ibmClientId&quot;))
+
+//========== Define the output file(s) =============
+props.put(&quot;logFileSuccess&quot;,&quot;EntitiesNoteSuccess-&quot;+vars.get(&quot;EnviroSet&quot;)+vars.get(&quot;EnvInstance&quot;)+&quot;.csv&quot;)
+props.put(&quot;logFileFailures&quot;,&quot;EntitiesNoteFail-&quot;+vars.get(&quot;EnviroSet&quot;)+vars.get(&quot;EnvInstance&quot;)+&quot;.csv&quot;)
+
+log.info(&quot;output files are: &quot;+props.get(&quot;logFileSuccess&quot;)+&quot; and &quot;+props.get(&quot;logFileFailures&quot;))
+def fnp = testPlanFileDir+&quot;/&quot;+props.get(&quot;logFileSuccess&quot;)
+def fileNoted = new File(fnp);
+log.info(&quot;path is &quot;+fileNoted.absolutePath)
+if (fileNoted.size()&gt;1) {
+	log.info(&quot;loading the list of noted entities. Filesize=&quot;+fileNoted.length())
+	props.put(&quot;entitiesNoted&quot;,fileNoted.text)
+	if (fileNoted.size()&gt;10000){
+		sFirstChunk = props.get(&quot;entitiesNoted&quot;).take(1000)
+		sLastChunk = props.get(&quot;entitiesNoted&quot;).takeRight(1000)
+		log.info(&quot;Noted (do not send):\r\n&quot;+sFirstChunk+&quot;\r\n...\r\n&quot;+sLastChunk)
+	} else {
+		log.info(&quot;Noted (do not send):\r\n&quot;+props.get(&quot;entitiesNoted&quot;))
+	}
+} else {
+	props.put(&quot;entitiesNoted&quot;,&quot;&quot;)
+	fileNoted.text = &quot;This is a list of EID+Date+Key which already have notes added in this environment\r\n&quot;
+}
+
+def fop = testPlanFileDir+&quot;./&quot;+props.get(&quot;logFileFailures&quot;)
+def fileOops = new File(fop);
+if (fileOops.size()&lt;1){
+	log.info(&quot;creating file &quot;+props.get(&quot;logFileFailures&quot;))
+	fileOops.delete()
+	fileOops.createNewFile()
+	fileOops.text = &quot;This is a list of failed EIDs\r\n&quot;
+}</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LoadTest Thread - NoteEmailByBNParent" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Announce myself - JSR223 PreProcessor" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;callingThread&quot;,&quot;NoteEmailByBNParent&quot;)</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - NoteEmailByBNParent" enabled="true">
+          <stringProp name="filename">${__P(dataFileCsv)}</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">BN_ENTITY_IDENTIFIER, BN_ADS_EMAIL_ORIG, REGISTRANT_ADS_EMAIL</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter - Row" enabled="true">
+          <stringProp name="CounterConfig.start">2</stringProp>
+          <stringProp name="CounterConfig.end"></stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">srcRow</stringProp>
+          <stringProp name="CounterConfig.format"></stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-220266772">PerformanceWS</stringProp>
+            <stringProp name="-1862231336">Module - execute BNEmail (keep disabled)</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait between Use Cases" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">${__P(notesPauseTime)}</stringProp>
+        </TestAction>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LoadTest Thread - AddRetroKeyNotes" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Announce myself - JSR223 PreProcessor" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;callingThread&quot;,&quot;AddRetroKeyNotes&quot;)</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - AddRetroKeyNotes" enabled="true">
+          <stringProp name="filename">${__P(dataFileCsv)}</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">EntityNumber, CompanyKeyRequestdDate, DeliveryMethod, RegisteredAddress, RequestorEmail, RequestorFirstname, RequesterLastname, RequestorTelephone, CompanyKey</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - PoC" enabled="false">
+          <stringProp name="filename">C:/Users/DalsinTh/OneDrive - Government of Ontario/Documents/Requests/TD240304-01-RetroactiveNotes-Key/CompanyKeyVerificationPoC.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Id, DeliveryMethod, EmailRequest, RequestorFirstname, RequesterLastname, RequestorEmail, RequestorTelephone, EntityName, EntityStatus, EntitySubstatus, RegisteredAddress, EntityNumber, CompanyKey, CompanyKeyRequestdDate, CompanyKeyRequestdDateDateformat, AssignedQCstaff, Category, DateChecked, Completed, AssignedMailingStaff, DateMailedEmailed, MailReturnedYN, DateReturnMailProcessed, ReturnMailProcessedBy, CommentsifApplicable</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter - Row" enabled="true">
+          <stringProp name="CounterConfig.start">2</stringProp>
+          <stringProp name="CounterConfig.end"></stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">srcRow</stringProp>
+          <stringProp name="CounterConfig.format"></stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-220266772">PerformanceWS</stringProp>
+            <stringProp name="1182727784">Module - execute CKey (keep disabled)</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Wait between Use Cases" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">${__P(notesPauseTime)}</stringProp>
+        </TestAction>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LoadTest Thread - Exception Handliing" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Announce myself - JSR223 PreProcessor" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;callingThread&quot;,&quot;Exception Handliing&quot;)</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - PoC" enabled="false">
+          <stringProp name="filename">C:/Users/DalsinTh/OneDrive - Government of Ontario/Documents/Requests/TD240304-01-RetroactiveNotes-Key/CompanyKeyVerificationPoC.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Id, DeliveryMethod, EmailRequest, RequestorFirstname, RequesterLastname, RequestorEmail, RequestorTelephone, EntityName, EntityStatus, EntitySubstatus, RegisteredAddress, EntityNumber, CompanyKey, CompanyKeyRequestdDate, CompanyKeyRequestdDateDateformat, AssignedQCstaff, Category, DateChecked, Completed, AssignedMailingStaff, DateMailedEmailed, MailReturnedYN, DateReturnMailProcessed, ReturnMailProcessedBy, CommentsifApplicable</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - ExcHandle" enabled="true">
+          <stringProp name="filename">${scriptPath}/Exception handling_Feb 2023 to March 2024.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">EntityNumber,CompanyKeyRequestdDate,DeliveryMethod,RegisteredAddress,RequestorEmail,RequestorFirstname,RequesterLastname,RequestorTelephone,CompanyKey</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter - Row" enabled="true">
+          <stringProp name="CounterConfig.start">2</stringProp>
+          <stringProp name="CounterConfig.end"></stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">srcRow</stringProp>
+          <stringProp name="CounterConfig.format"></stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-220266772">PerformanceWS</stringProp>
+            <stringProp name="-1862231336">Module - execute BNEmail (keep disabled)</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LoadTest Thread - Mailout" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Announce myself - JSR223 PreProcessor" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;callingThread&quot;,&quot;Mailout&quot;)</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - PoC" enabled="false">
+          <stringProp name="filename">C:/Users/DalsinTh/OneDrive - Government of Ontario/Documents/Requests/TD240304-01-RetroactiveNotes-Key/CompanyKeyVerificationPoC.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Id, DeliveryMethod, EmailRequest, RequestorFirstname, RequesterLastname, RequestorEmail, RequestorTelephone, EntityName, EntityStatus, EntitySubstatus, RegisteredAddress, EntityNumber, CompanyKey, CompanyKeyRequestdDate, CompanyKeyRequestdDateDateformat, AssignedQCstaff, Category, DateChecked, Completed, AssignedMailingStaff, DateMailedEmailed, MailReturnedYN, DateReturnMailProcessed, ReturnMailProcessedBy, CommentsifApplicable</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Mailout" enabled="true">
+          <stringProp name="filename">${scriptPath}/Mailout_Oct 2021 to March 2024.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">EntityNumber,CompanyKeyRequestdDate,DeliveryMethod,RegisteredAddress,RequestorEmail,RequestorFirstname,RequesterLastname,RequestorTelephone,CompanyKey</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter - Row" enabled="true">
+          <stringProp name="CounterConfig.start">2</stringProp>
+          <stringProp name="CounterConfig.end"></stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">srcRow</stringProp>
+          <stringProp name="CounterConfig.format"></stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-220266772">PerformanceWS</stringProp>
+            <stringProp name="-1862231336">Module - execute BNEmail (keep disabled)</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="LoadTest Thread - Email" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration">60</stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">false</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="Announce myself - JSR223 PreProcessor" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;callingThread&quot;,&quot;Email&quot;)</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223PreProcessor>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - PoC" enabled="false">
+          <stringProp name="filename">C:/Users/DalsinTh/OneDrive - Government of Ontario/Documents/Requests/TD240304-01-RetroactiveNotes-Key/CompanyKeyVerificationPoC.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">Id, DeliveryMethod, EmailRequest, RequestorFirstname, RequesterLastname, RequestorEmail, RequestorTelephone, EntityName, EntityStatus, EntitySubstatus, RegisteredAddress, EntityNumber, CompanyKey, CompanyKeyRequestdDate, CompanyKeyRequestdDateDateformat, AssignedQCstaff, Category, DateChecked, Completed, AssignedMailingStaff, DateMailedEmailed, MailReturnedYN, DateReturnMailProcessed, ReturnMailProcessedBy, CommentsifApplicable</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config - Email" enabled="true">
+          <stringProp name="filename">${scriptPath}/Email_Oct 2021 to March 2024.csv</stringProp>
+          <stringProp name="fileEncoding">UTF-8</stringProp>
+          <stringProp name="variableNames">EntityNumber,CompanyKeyRequestdDate,DeliveryMethod,RegisteredAddress,RequestorEmail,RequestorFirstname,RequesterLastname,RequestorTelephone,CompanyKey</stringProp>
+          <boolProp name="ignoreFirstLine">true</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">false</boolProp>
+          <boolProp name="stopThread">true</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="Counter - Row" enabled="true">
+          <stringProp name="CounterConfig.start">2</stringProp>
+          <stringProp name="CounterConfig.end"></stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">srcRow</stringProp>
+          <stringProp name="CounterConfig.format"></stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="true">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="-220266772">PerformanceWS</stringProp>
+            <stringProp name="-1862231336">Module - execute BNEmail (keep disabled)</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Module - execute CKey (keep disabled)" enabled="false"/>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="VariablesPerLoop" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="eid" elementType="Argument">
+              <stringProp name="Argument.name">eid</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.desc">Entity Identifier</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="registerSuffix" elementType="Argument">
+              <stringProp name="Argument.name">registerSuffix</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.desc">Required suffix, like INC for corporations</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="loopCountPhone" elementType="Argument">
+              <stringProp name="Argument.name">loopCountPhone</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="busName" elementType="Argument">
+              <stringProp name="Argument.name">busName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="headerRegister" elementType="Argument">
+              <stringProp name="Argument.name">headerRegister</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="serverPartner" elementType="Argument">
+              <stringProp name="Argument.name">serverPartner</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="serverIntra" elementType="Argument">
+              <stringProp name="Argument.name">serverIntra</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="pathUrlPartner" elementType="Argument">
+              <stringProp name="Argument.name">pathUrlPartner</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="pathUrlIntra" elementType="Argument">
+              <stringProp name="Argument.name">pathUrlIntra</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="entityTypeCodePartner" elementType="Argument">
+              <stringProp name="Argument.name">entityTypeCodePartner</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="entityTypeCodeIntra" elementType="Argument">
+              <stringProp name="Argument.name">entityTypeCodeIntra</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="serviceSuffix" elementType="Argument">
+              <stringProp name="Argument.name">serviceSuffix</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="randomStringBusName" elementType="Argument">
+              <stringProp name="Argument.name">randomStringBusName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notesTitle" elementType="Argument">
+              <stringProp name="Argument.name">notesTitle</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notesComment" elementType="Argument">
+              <stringProp name="Argument.name">notesComment</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notesTags" elementType="Argument">
+              <stringProp name="Argument.name">notesTags</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteAddr" elementType="Argument">
+              <stringProp name="Argument.name">noteAddr</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteFName" elementType="Argument">
+              <stringProp name="Argument.name">noteFName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteLName" elementType="Argument">
+              <stringProp name="Argument.name">noteLName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteEmail" elementType="Argument">
+              <stringProp name="Argument.name">noteEmail</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteLocal" elementType="Argument">
+              <stringProp name="Argument.name">noteLocal</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notePhone" elementType="Argument">
+              <stringProp name="Argument.name">notePhone</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="emergencyPause" elementType="Argument">
+              <stringProp name="Argument.name">emergencyPause</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="verboseLog" elementType="Argument">
+              <stringProp name="Argument.name">verboseLog</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="portEnv" elementType="Argument">
+              <stringProp name="Argument.name">portEnv</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="setUpVars" enabled="true">
+          <stringProp name="TestPlan.comments">Randomly selects the register between Corp,Business,Partner</stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;envString&quot;,&quot;&quot;+props.get(&quot;EnviroSet&quot;).toUpperCase()+props.get(&quot;EnvInstance&quot;))
+vars.put(&quot;clientId&quot;,&quot;&quot;+props.get(&quot;ibmClientId&quot;))
+
+vars.put(&quot;serverIntra&quot;,&quot;&quot;+vars.get(&quot;srv&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Intra&quot;))
+vars.put(&quot;serverPartner&quot;,&quot;&quot;+vars.get(&quot;srv&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Partner&quot;))
+
+vars.put(&quot;pathUrlIntra&quot;,&quot;&quot;+vars.get(&quot;pth&quot;+props.get(&quot;EnviroSet&quot;)+props.get(&quot;EnvInstance&quot;)+vars.get(&quot;GatewaySet&quot;)+(vars.get(&quot;GatewaySet&quot;)==&quot;Dp&quot; ? &quot;&quot; : &quot;Intra&quot;)))
+vars.put(&quot;pathUrlPartner&quot;,&quot;&quot;+vars.get(&quot;pth&quot;+props.get(&quot;EnviroSet&quot;)+props.get(&quot;EnvInstance&quot;)+vars.get(&quot;GatewaySet&quot;)+(vars.get(&quot;GatewaySet&quot;)==&quot;Dp&quot; ? &quot;&quot; : &quot;Partner&quot;)))
+
+vars.put(&quot;entityTypeCodeIntra&quot;,&quot;&quot;+vars.get(&quot;cid&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Intra&quot;))
+vars.put(&quot;entityTypeCodePartner&quot;,&quot;&quot;+vars.get(&quot;cid&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Partner&quot;))
+
+vars.put(&quot;serviceSuffix&quot;,&quot;&quot;+(vars.get(&quot;GatewaySet&quot;)==&quot;Apic&quot; ? &quot;&quot; : &quot;.ws&quot;))
+
+vars.put(&quot;randomStringBusName&quot;,org.apache.commons.lang.RandomStringUtils.random(12, true, true))
+
+vars.put(&quot;portEnv&quot;,&quot;443&quot;)
+if (vars.get(&quot;envString&quot;).toUpperCase().contains(&quot;PR&quot;)){
+	vars.put(&quot;portEnv&quot;,&quot;8443&quot;)
+}
+//vars.put(&quot;randomEntityChoice&quot;,org.apache.commons.lang.RandomUtils.nextInt(1,10000))
+
+//========================
+
+//vars.put(&quot;eid&quot;,&quot;&quot;+vars.get(&quot;EntityNumber&quot;))
+//log.info(&quot;EntityNumber = &quot;+vars.get(&quot;EntityNumber&quot;))
+</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="loopCountPhone" enabled="true">
+          <stringProp name="CounterConfig.start">2000000</stringProp>
+          <stringProp name="CounterConfig.end">7999999</stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">loopCountPhone</stringProp>
+          <stringProp name="CounterConfig.format">0000000</stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="prep NotesData - JSR223 Sampler - ask" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import org.apache.commons.text.StringEscapeUtils
+
+vars.put(&quot;eid&quot;,&quot;&quot;+vars.get(&quot;EntityNumber&quot;))
+if (vars.get(&quot;eid&quot;)==null || vars.get(&quot;eid&quot;).equalsIgnoreCase(&quot;null&quot;)) {
+	log.warn(&quot;NULL EID&quot;)
+	return false
+}
+
+def titleMethod = vars.get(&quot;DeliveryMethod&quot;)?&quot; via &quot;+vars.get(&quot;DeliveryMethod&quot;):&quot; via Alternate Path&quot;
+
+def hashedKey() {
+	hashedKeyout = &quot;&quot;
+	if (vars.get(&quot;CompanyKey&quot;)==null) {
+		//log.info(&quot;Company Key Not Provided&quot;)
+		return &quot;Not Provided&quot;
+	} else {
+		for (int hki = 0; hki &lt; vars.get(&quot;CompanyKey&quot;).length()-4; hki++){
+			hashedKeyout = hashedKeyout.concat(&quot;*&quot;)
+		}
+		if (vars.get(&quot;CompanyKey&quot;).length()&gt;3) {
+			hashedKeyout = hashedKeyout.concat(vars.get(&quot;CompanyKey&quot;).substring(vars.get(&quot;CompanyKey&quot;).length() - 4))
+		}
+		//log.info(&quot;Company Key = &quot;+hashedKeyout)
+		return hashedKeyout
+	}
+}
+def valOrDefault(varname){
+	def valueDef = &quot;Not Provided&quot;
+	return (vars.get(varname)?:valueDef)
+}
+def localValGet() {
+	def noLocalFound = &quot;Not Provided&quot;
+	if (vars.get(&quot;RegisteredAddress&quot;)){
+		addrUpp = vars.get(&quot;RegisteredAddress&quot;).toUpperCase()
+		if (addrUpp.contains(&quot;, CA,&quot;) || addrUpp.contains(&quot;,CA,&quot;)){
+			return &quot;CA&quot;
+		} else {
+			addTkz = addrUpp.tokenize(&apos;,&apos;)
+			if (addTkz.size()&gt;4){
+				return addTkz[addTkz.size()-2].replaceAll(&quot;\\s&quot;,&quot;&quot;)
+			} else {
+				return noLocalFound
+			}
+		}
+	} else {
+		return noLocalFound
+	}
+}
+
+vars.put(&quot;notesTitle&quot;,&quot;Company Key fullfilment&quot;+titleMethod+&quot; - Note for &quot;+vars.get(&quot;CompanyKeyRequestdDate&quot;))
+vars.put(&quot;notesTags&quot;,&quot;company key,&quot;)
+
+def notesComment = &quot;Address : &quot;+valOrDefault(&quot;RegisteredAddress&quot;)+&quot; ; First Name : &quot;+valOrDefault(&quot;RequestorFirstname&quot;)+&quot; ; Last Name : &quot;+valOrDefault(&quot;RequesterLastname&quot;)+&quot; ; Created Date : &quot;+vars.get(&quot;dtToday&quot;)+&quot; ; Email : &quot;+valOrDefault(&quot;RequestorEmail&quot;)+&quot; ; Local : &quot;+localValGet()+&quot; ; Telephone : &quot;+valOrDefault(&quot;RequestorTelephone&quot;)+&quot; ; Company Key : &quot;+hashedKey()
+
+vars.put(&quot;notesComment&quot;,StringEscapeUtils.escapeXml10(notesComment))
+</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If NULL row" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(vars.get(&quot;eid&quot;)==null||vars.get(&quot;eid&quot;).equalsIgnoreCase(&quot;null&quot;))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Skip this null entity" enabled="true">
+            <intProp name="ActionProcessor.action">4</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Already Added" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(props.get(&quot;entitiesNoted&quot;).contains(&quot;\r\n&quot;+vars.get(&quot;eid&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKeyRequestdDate&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKey&quot;)+&quot;\r\n&quot;))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Skip this entity" enabled="true">
+            <intProp name="ActionProcessor.action">4</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If too many failures" enabled="true">
+          <stringProp name="IfController.condition">${__groovy((vars.get(&quot;consecutiveFailures&quot;) as Integer)&gt;(vars.get(&quot;failLimit&quot;) as Integer))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Stop running - TOO MANY ERRORS" enabled="true">
+            <intProp name="ActionProcessor.action">0</intProp>
+            <intProp name="ActionProcessor.target">2</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If sentCount is maxed out" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(((props.get(&quot;sendCount&quot;) as Integer)&gt;0) &amp;&amp; (vars.get(&quot;sentCount&quot;) as Integer)&gt;=(props.get(&quot;sendCount&quot;) as Integer))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Stop running - MAX SENT ${__BeanShell(props.get(&quot;sendCount&quot;))}" enabled="true">
+            <intProp name="ActionProcessor.action">0</intProp>
+            <intProp name="ActionProcessor.target">2</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree/>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="log EID and count" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">log.info(&quot;EID = &quot;+vars.get(&quot;eid&quot;)+&quot; sending &quot;+vars.get(&quot;sentCount&quot;)+&quot;/&quot;+props.get(&quot;sendCount&quot;))</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UseCase-AddFileNotes" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Messages as Vars" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="SearchResponse" elementType="Argument">
+                <stringProp name="Argument.name">SearchResponse</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="AddFileNotesResponse" elementType="Argument">
+                <stringProp name="Argument.name">AddFileNotesResponse</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="SearchRequest" elementType="Argument">
+                <stringProp name="Argument.name">SearchRequest</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="AddFileNotesRequest" elementType="Argument">
+                <stringProp name="Argument.name">AddFileNotesRequest</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="SearchResponseHeaders" elementType="Argument">
+                <stringProp name="Argument.name">SearchResponseHeaders</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP Search" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:onb=&quot;http://com.fostermoore.catalyst/service/onbis&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;onb:OnbisEntitySearch&gt;&#xd;
+         &lt;onb:SearchFor&gt;${eid}&lt;/onb:SearchFor&gt;&#xd;
+         &lt;onb:ExactMatch&gt;true&lt;/onb:ExactMatch&gt;&#xd;
+      &lt;/onb:OnbisEntitySearch&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${serverIntra}</stringProp>
+            <stringProp name="HTTPSampler.port">${portEnv}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">${pathUrlIntra}/OnbisEntitySearch${serviceSuffix}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager - Intra ID" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-IBM-Client-Id" elementType="Header">
+                  <stringProp name="Header.name">X-IBM-Client-Id</stringProp>
+                  <stringProp name="Header.value">${__P(ibmClientId)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip,deflate,br</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Apache-HttpClient/4.5.2 (Java/17.0.5)</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager - Intra ID Informatica" enabled="false">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-IBM-Client-Id" elementType="Header">
+                  <stringProp name="Header.name">X-IBM-Client-Id</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip,deflate,br</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Apache-HttpClient/4.5.2 (Java/17.0.5)</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="StoreSearchMsg JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">vars.put(&quot;SearchResponse&quot;,prev.getResponseDataAsString())
+vars.put(&quot;SearchResponseHeaders&quot;,prev.getResponseHeaders())
+//log.info(&quot;Search response = &quot;+vars.get(&quot;SearchResponse&quot;))</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Search Failed" enabled="true">
+            <stringProp name="IfController.condition">${__groovy(!vars.get(&quot;SearchResponse&quot;).contains(&quot;&lt;status&gt;Success&lt;/status&gt;&quot;))}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+          </IfController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Log Searchfail - JSR223 Sampler" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">log.warn(&quot;Search failed on EID=&quot;+vars.get(&quot;eid&quot;))
+log.warn(&quot;response:\r\n&quot;+vars.get(&quot;SearchResponseHeaders&quot;)+&quot;\r\n&quot;+vars.get(&quot;SearchResponse&quot;))</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Next Iteration" enabled="true">
+              <intProp name="ActionProcessor.action">4</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Register Select" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def xmlRsp = new groovy.xml.XmlSlurper().parseText(vars.get(&quot;SearchResponse&quot;))
+def foundRegister = xmlRsp.Body.OnbisEntitySearchResponse.EntityInfo.Register.text()
+if (foundRegister.contains(&quot;partner&quot;)) {
+	vars.put(&quot;headerRegister&quot;,&quot;partnerentity&quot;)
+} else if (foundRegister.contains(&quot;corp&quot;)) {
+	vars.put(&quot;headerRegister&quot;,&quot;corporationentity&quot;)
+} else {
+	vars.put(&quot;headerRegister&quot;,&quot;businessentity&quot;)
+}
+log.info(&quot;Search for &quot;+vars.get(&quot;eid&quot;)+&quot; successful.\r\n\tRegister = &quot;+foundRegister+&quot; --&gt; &quot;+vars.get(&quot;headerRegister&quot;))
+
+// first maybe log how many
+
+// consider arraylist for the register, so if there is more than one we can try multiple registers.
+// props.put(&quot;mylist&quot;, new ArrayList())
+// props.get(&quot;mylist&quot;).add(&lt;some value&gt;)
+// log.info(props.get(&quot;mylist&quot;).toString())</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Pause" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">${__P(notesPauseTime)}</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Data Check" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP AddFileNotes" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:onb=&quot;http://com.fostermoore.catalyst/service/onbis&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;onb:OnbisAddFileNotesRequest&gt;&#xd;
+         &lt;onb:Title&gt;${notesTitle}&lt;/onb:Title&gt;&#xd;
+         &lt;onb:Comment&gt;${notesComment}&lt;/onb:Comment&gt;&#xd;
+         &lt;onb:Tags&gt;${notesTags}&lt;/onb:Tags&gt;&#xd;
+         &lt;onb:EntityIdentifier&gt;${eid}&lt;/onb:EntityIdentifier&gt;&#xd;
+      &lt;/onb:OnbisAddFileNotesRequest&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${serverIntra}</stringProp>
+            <stringProp name="HTTPSampler.port">${portEnv}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">${pathUrlIntra}/OnbisAddFileNotes${serviceSuffix}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">${__threadNum} or ${entityInCsv} can be appended to the Name if you want to track with high granularity (though bad for gathering statistics and graphs)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager - Intra ID" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-IBM-Client-Id" elementType="Header">
+                  <stringProp name="Header.name">X-IBM-Client-Id</stringProp>
+                  <stringProp name="Header.value">${__P(ibmClientId)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip,deflate,br</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Apache-HttpClient/4.5.2 (Java/17.0.5)</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">${headerRegister}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Log Entry - JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters">${scriptPath}</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">log.info(&quot;message sent to &quot;+sampler.getPath())
+//========= OVERALL LOGGING ===========
+def dataFileNoExt = props.get(&quot;dataFileCsv&quot;).reverse().substring(4).reverse()
+def sentListFilePath = &quot;&quot;+props.get(&quot;scriptPath&quot;)+&quot;/ExecLog-&quot;+dataFileNoExt+&quot;-${tsThisSecond}.csv&quot;
+def csvRow = &quot;&quot;
+def logNoted = false
+def ifFailedWhy = &quot;&quot;
+if (prev.getResponseDataAsString().startsWith(&quot;&lt;&quot;)){
+	log.info(&quot;received data&quot;)
+	def responseXmlHead = new XmlSlurper().parseText(prev.getResponseDataAsString())
+	def xpathStatus = &quot;/Envelope/Body/OnbisAddFileNotesResponse/status&quot;
+	def sentStatus = responseXmlHead.Body.OnbisAddFileNotesResponse.status.text()?:&quot;ERROR&quot;
+	if (sentStatus.equalsIgnoreCase(&quot;success&quot;)){
+		logNoted = true
+	} else {
+		log.warn(&quot;FAILURE on EID=&quot;+vars.get(&quot;eid&quot;)+&quot;:\r\n&quot;+prev.getResponseDataAsString())
+		log.warn(&quot;SENT:\r\n&quot;+prev.getSamplerData())
+		ifFailedWhy = responseXmlHead.errorResponse.moreInformation.text()?:responseXmlHead.Body.OnbisAddFileNotes.errors.error.message.text()
+	}
+	csvRow = &quot;&quot;+vars.get(&quot;callingThread&quot;)+&quot;,&quot;+vars.get(&quot;srcRow&quot;)+&quot;,&quot;+vars.get(&quot;eid&quot;)+&quot;,&quot;+sentStatus+&quot;[&quot;+ifFailedWhy+&quot;]\r\n&quot;
+} else {
+	log.info(&quot;AddFileNotes didn&apos;t run correct. Got the following:\r\n&quot;+prev.getResponseDataAsString())
+	csvRow = &quot;&quot;+vars.get(&quot;callingThread&quot;)+&quot;,&quot;+vars.get(&quot;srcRow&quot;)+&quot;,&quot;+vars.get(&quot;eid&quot;)+&quot;,ERROR[NULL]\r\n&quot;
+}
+
+def sentListfile = new File(sentListFilePath);
+sentListfile.append(csvRow.getBytes());
+
+def entryRecord = vars.get(&quot;eid&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKeyRequestdDate&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKey&quot;)+&quot;\r\n&quot;
+
+if (logNoted){
+	//========= SUCCESS LOGGING ===========
+	def fnp = props.get(&quot;scriptPath&quot;)+&quot;/&quot;+props.get(&quot;logFileSuccess&quot;)
+	def fileNoted = new File(fnp);
+	if (fileNoted.size()&lt;1){
+		log.info(&quot;creating file &quot;+props.get(&quot;logFileSuccess&quot;))
+		fileNoted.delete()
+		fileNoted.createNewFile()
+		fileNoted.text = &quot;This is a list of those EIDs which already have notes added in this environment\r\n&quot;
+	}
+	fileNoted.append(entryRecord)
+	vars.put(&quot;consecutiveFailures&quot;,&quot;0&quot;)
+} else {
+	//========= FAILED LOGGING ===========
+	def fop = props.get(&quot;scriptPath&quot;)+&quot;/&quot;+props.get(&quot;logFileFailures&quot;)
+	def fileOops = new File(fop);
+	def curErrCount = vars.get(&quot;consecutiveFailures&quot;) as Integer
+	if (fileOops.size()&lt;1){
+		log.info(&quot;creating file &quot;+props.get(&quot;logFileFailures&quot;))
+		fileOops.delete()
+		fileOops.createNewFile()
+		fileOops.text = &quot;This is a list of failed EIDs\r\n&quot;
+	}
+	fileOops.append(entryRecord)
+	vars.put(&quot;consecutiveFailures&quot;,(curErrCount+1).toString())
+}
+</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="taskManagement - JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// get the big string of headers, split by lines, and then split into a key-value map
+def listHeaders = prev.getResponseHeaders().split(&apos;\n&apos;)
+def needToWait = false
+for (header in listHeaders){
+	if (header.contains(&quot;Limit-Remaining&quot;)){
+		def vi0 = header.indexOf(&apos;,&apos;)+1
+		def vi1 = header.length()-1
+		def remainingVal = header.substring(vi0,vi1)
+		//log.info(&quot;REMAINING=&quot;+remainingVal)
+		if (remainingVal.isNumber()){
+			if (remainingVal as Integer &lt; 5){
+				//log.info(&quot;&quot;+header)
+				log.info(&quot;Running out of throughput! Pause for 30 seconds&quot;)
+				needToWait = true
+			} else {
+				//log.info(&quot;still OK. &quot;+(remainingVal as Integer).toString()+&quot; remaining&quot;)
+			}
+		}
+	}
+}
+if (needToWait){
+	vars.put(&quot;emergencyPause&quot;,&quot;30000&quot;)
+} else {
+	vars.put(&quot;emergencyPause&quot;,&quot;0&quot;)
+}
+
+def risingCount = vars.get(&quot;sentCount&quot;) as Integer
+if ((props.get(&quot;sendCount&quot;) as Integer) &gt; 0) vars.put(&quot;sentCount&quot;,(risingCount+1).toString())</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Pause" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">${emergencyPause}</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Module - execute BNEmail (keep disabled)" enabled="false"/>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="VariablesPerLoop" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="eid" elementType="Argument">
+              <stringProp name="Argument.name">eid</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.desc">Entity Identifier</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="registerSuffix" elementType="Argument">
+              <stringProp name="Argument.name">registerSuffix</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.desc">Required suffix, like INC for corporations</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="loopCountPhone" elementType="Argument">
+              <stringProp name="Argument.name">loopCountPhone</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="busName" elementType="Argument">
+              <stringProp name="Argument.name">busName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="headerRegister" elementType="Argument">
+              <stringProp name="Argument.name">headerRegister</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="serverPartner" elementType="Argument">
+              <stringProp name="Argument.name">serverPartner</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="serverIntra" elementType="Argument">
+              <stringProp name="Argument.name">serverIntra</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="pathUrlPartner" elementType="Argument">
+              <stringProp name="Argument.name">pathUrlPartner</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="pathUrlIntra" elementType="Argument">
+              <stringProp name="Argument.name">pathUrlIntra</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="entityTypeCodePartner" elementType="Argument">
+              <stringProp name="Argument.name">entityTypeCodePartner</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="entityTypeCodeIntra" elementType="Argument">
+              <stringProp name="Argument.name">entityTypeCodeIntra</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="serviceSuffix" elementType="Argument">
+              <stringProp name="Argument.name">serviceSuffix</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="randomStringBusName" elementType="Argument">
+              <stringProp name="Argument.name">randomStringBusName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notesTitle" elementType="Argument">
+              <stringProp name="Argument.name">notesTitle</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notesComment" elementType="Argument">
+              <stringProp name="Argument.name">notesComment</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notesTags" elementType="Argument">
+              <stringProp name="Argument.name">notesTags</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteAddr" elementType="Argument">
+              <stringProp name="Argument.name">noteAddr</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteFName" elementType="Argument">
+              <stringProp name="Argument.name">noteFName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteLName" elementType="Argument">
+              <stringProp name="Argument.name">noteLName</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteEmail" elementType="Argument">
+              <stringProp name="Argument.name">noteEmail</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="noteLocal" elementType="Argument">
+              <stringProp name="Argument.name">noteLocal</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="notePhone" elementType="Argument">
+              <stringProp name="Argument.name">notePhone</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="emergencyPause" elementType="Argument">
+              <stringProp name="Argument.name">emergencyPause</stringProp>
+              <stringProp name="Argument.value">0</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="verboseLog" elementType="Argument">
+              <stringProp name="Argument.name">verboseLog</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="portEnv" elementType="Argument">
+              <stringProp name="Argument.name">portEnv</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="newemail" elementType="Argument">
+              <stringProp name="Argument.name">newemail</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="oldemail" elementType="Argument">
+              <stringProp name="Argument.name">oldemail</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="setUpVars" enabled="true">
+          <stringProp name="TestPlan.comments">Randomly selects the register between Corp,Business,Partner</stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">vars.put(&quot;envString&quot;,&quot;&quot;+props.get(&quot;EnviroSet&quot;).toUpperCase()+props.get(&quot;EnvInstance&quot;))
+vars.put(&quot;clientId&quot;,&quot;&quot;+props.get(&quot;ibmClientId&quot;))
+
+vars.put(&quot;serverIntra&quot;,&quot;&quot;+vars.get(&quot;srv&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Intra&quot;))
+vars.put(&quot;serverPartner&quot;,&quot;&quot;+vars.get(&quot;srv&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Partner&quot;))
+
+vars.put(&quot;pathUrlIntra&quot;,&quot;&quot;+vars.get(&quot;pth&quot;+props.get(&quot;EnviroSet&quot;)+props.get(&quot;EnvInstance&quot;)+vars.get(&quot;GatewaySet&quot;)+(vars.get(&quot;GatewaySet&quot;)==&quot;Dp&quot; ? &quot;&quot; : &quot;Intra&quot;)))
+vars.put(&quot;pathUrlPartner&quot;,&quot;&quot;+vars.get(&quot;pth&quot;+props.get(&quot;EnviroSet&quot;)+props.get(&quot;EnvInstance&quot;)+vars.get(&quot;GatewaySet&quot;)+(vars.get(&quot;GatewaySet&quot;)==&quot;Dp&quot; ? &quot;&quot; : &quot;Partner&quot;)))
+
+vars.put(&quot;entityTypeCodeIntra&quot;,&quot;&quot;+vars.get(&quot;cid&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Intra&quot;))
+vars.put(&quot;entityTypeCodePartner&quot;,&quot;&quot;+vars.get(&quot;cid&quot;+props.get(&quot;EnviroSet&quot;)+vars.get(&quot;GatewaySet&quot;)+&quot;Partner&quot;))
+
+vars.put(&quot;serviceSuffix&quot;,&quot;&quot;+(vars.get(&quot;GatewaySet&quot;)==&quot;Apic&quot; ? &quot;&quot; : &quot;.ws&quot;))
+
+vars.put(&quot;randomStringBusName&quot;,org.apache.commons.lang.RandomStringUtils.random(12, true, true))
+
+vars.put(&quot;portEnv&quot;,&quot;443&quot;)
+if (vars.get(&quot;envString&quot;).toUpperCase().contains(&quot;PR&quot;)){
+	vars.put(&quot;portEnv&quot;,&quot;8443&quot;)
+}
+//vars.put(&quot;randomEntityChoice&quot;,org.apache.commons.lang.RandomUtils.nextInt(1,10000))
+
+//========================
+
+//vars.put(&quot;eid&quot;,&quot;&quot;+vars.get(&quot;EntityNumber&quot;))
+//log.info(&quot;EntityNumber = &quot;+vars.get(&quot;EntityNumber&quot;))
+</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="loopCountPhone" enabled="true">
+          <stringProp name="CounterConfig.start">2000000</stringProp>
+          <stringProp name="CounterConfig.end">7999999</stringProp>
+          <stringProp name="CounterConfig.incr">1</stringProp>
+          <stringProp name="CounterConfig.name">loopCountPhone</stringProp>
+          <stringProp name="CounterConfig.format">0000000</stringProp>
+          <boolProp name="CounterConfig.per_user">false</boolProp>
+        </CounterConfig>
+        <hashTree/>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="prep NotesData - JSR223 Sampler - ask" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">import org.apache.commons.text.StringEscapeUtils
+
+// GRAB VARS FROM CSV
+vars.put(&quot;eid&quot;,&quot;&quot;+vars.get(&quot;BN_ENTITY_IDENTIFIER&quot;))
+vars.put(&quot;newemail&quot;,&quot;&quot;+vars.get(&quot;REGISTRANT_ADS_EMAIL&quot;))
+vars.put(&quot;oldemail&quot;,&quot;&quot;+vars.get(&quot;BN_ADS_EMAIL_ORIG&quot;)) //BN_ADS_EMAIL_ORIG may or may not be populated
+
+log.info(&quot;new email = &quot;+vars.get(&quot;newemail&quot;))
+log.info(&quot;old email = &quot;+vars.get(&quot;oldemail&quot;))
+
+if (vars.get(&quot;eid&quot;)==null || vars.get(&quot;eid&quot;).equalsIgnoreCase(&quot;null&quot;)) {
+	log.warn(&quot;NULL EID&quot;)
+	return false
+}
+
+def valOrDefault(varname){
+	def valueDef = &quot;Not Provided&quot;
+	return (vars.get(varname)?:valueDef)
+}
+
+def notesComment(newemail,oldemail) {
+	if (oldemail==null || oldemail.length() &lt; 3){
+		return &quot;Official email address of Registrant, &quot;+vars.get(&quot;newemail&quot;)+&quot;, was added on January 18, 2025.&quot;
+	} else {
+		return &quot;Official email address was changed from &quot;+vars.get(&quot;oldemail&quot;)+&quot; to &quot;+vars.get(&quot;newemail&quot;)+&quot; on January 18, 2025.&quot;
+	}
+}
+
+def notesTitle(oldemail) {
+	if (oldemail==null || oldemail.length() &lt; 3){
+		return &quot;Added official email address of the Registrant&quot;
+	} else {
+		return &quot;Change of official email address to that of the Registrant&quot;
+	}
+}
+
+vars.put(&quot;notesTitle&quot;,StringEscapeUtils.escapeXml10(notesTitle(vars.get(&quot;oldemail&quot;))))
+vars.put(&quot;notesTags&quot;,&quot;Email Updated&quot;)
+vars.put(&quot;notesComment&quot;,StringEscapeUtils.escapeXml10(notesComment(vars.get(&quot;newemail&quot;),vars.get(&quot;oldemail&quot;))))
+</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If NULL row" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(vars.get(&quot;eid&quot;)==null||vars.get(&quot;eid&quot;).equalsIgnoreCase(&quot;null&quot;))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Skip this null entity" enabled="true">
+            <intProp name="ActionProcessor.action">4</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Already Added" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(props.get(&quot;entitiesNoted&quot;).contains(&quot;\r\n&quot;+vars.get(&quot;eid&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKeyRequestdDate&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKey&quot;)+&quot;\r\n&quot;))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Skip this entity" enabled="true">
+            <intProp name="ActionProcessor.action">4</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If too many failures" enabled="true">
+          <stringProp name="IfController.condition">${__groovy((vars.get(&quot;consecutiveFailures&quot;) as Integer)&gt;(vars.get(&quot;failLimit&quot;) as Integer))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Stop running - TOO MANY ERRORS" enabled="true">
+            <intProp name="ActionProcessor.action">0</intProp>
+            <intProp name="ActionProcessor.target">2</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If sentCount is maxed out" enabled="true">
+          <stringProp name="IfController.condition">${__groovy(((props.get(&quot;sendCount&quot;) as Integer)&gt;0) &amp;&amp; (vars.get(&quot;sentCount&quot;) as Integer)&gt;=(props.get(&quot;sendCount&quot;) as Integer))}</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+          <boolProp name="IfController.useExpression">true</boolProp>
+        </IfController>
+        <hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Stop running - MAX SENT ${__BeanShell(props.get(&quot;sendCount&quot;))}" enabled="true">
+            <intProp name="ActionProcessor.action">0</intProp>
+            <intProp name="ActionProcessor.target">2</intProp>
+            <stringProp name="ActionProcessor.duration">0</stringProp>
+          </TestAction>
+          <hashTree/>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="log EID and count" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">log.info(&quot;EID = &quot;+vars.get(&quot;eid&quot;)+&quot; sending &quot;+vars.get(&quot;sentCount&quot;)+&quot;/&quot;+props.get(&quot;sendCount&quot;))</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">prev.setIgnore();</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="UseCase-AddFileNotes" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Messages as Vars" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="SearchResponse" elementType="Argument">
+                <stringProp name="Argument.name">SearchResponse</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="AddFileNotesResponse" elementType="Argument">
+                <stringProp name="Argument.name">AddFileNotesResponse</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="SearchRequest" elementType="Argument">
+                <stringProp name="Argument.name">SearchRequest</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="AddFileNotesRequest" elementType="Argument">
+                <stringProp name="Argument.name">AddFileNotesRequest</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="SearchResponseHeaders" elementType="Argument">
+                <stringProp name="Argument.name">SearchResponseHeaders</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP Search" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:onb=&quot;http://com.fostermoore.catalyst/service/onbis&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;onb:OnbisEntitySearch&gt;&#xd;
+         &lt;onb:SearchFor&gt;${eid}&lt;/onb:SearchFor&gt;&#xd;
+         &lt;onb:ExactMatch&gt;true&lt;/onb:ExactMatch&gt;&#xd;
+      &lt;/onb:OnbisEntitySearch&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${serverIntra}</stringProp>
+            <stringProp name="HTTPSampler.port">${portEnv}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">${pathUrlIntra}/OnbisEntitySearch${serviceSuffix}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager - Intra ID" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-IBM-Client-Id" elementType="Header">
+                  <stringProp name="Header.name">X-IBM-Client-Id</stringProp>
+                  <stringProp name="Header.value">${__P(ibmClientId)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip,deflate,br</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Apache-HttpClient/4.5.2 (Java/17.0.5)</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager - Intra ID Informatica" enabled="false">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-IBM-Client-Id" elementType="Header">
+                  <stringProp name="Header.name">X-IBM-Client-Id</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip,deflate,br</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Apache-HttpClient/4.5.2 (Java/17.0.5)</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value"></stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="StoreSearchMsg JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">vars.put(&quot;SearchResponse&quot;,prev.getResponseDataAsString())
+vars.put(&quot;SearchResponseHeaders&quot;,prev.getResponseHeaders())
+//log.info(&quot;Search response = &quot;+vars.get(&quot;SearchResponse&quot;))</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Search Failed" enabled="true">
+            <stringProp name="IfController.condition">${__groovy(!vars.get(&quot;SearchResponse&quot;).contains(&quot;&lt;status&gt;Success&lt;/status&gt;&quot;))}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+            <boolProp name="IfController.useExpression">true</boolProp>
+          </IfController>
+          <hashTree>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="Log Searchfail - JSR223 Sampler" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">log.warn(&quot;Search failed on EID=&quot;+vars.get(&quot;eid&quot;))
+log.warn(&quot;response:\r\n&quot;+vars.get(&quot;SearchResponseHeaders&quot;)+&quot;\r\n&quot;+vars.get(&quot;SearchResponse&quot;))</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Next Iteration" enabled="true">
+              <intProp name="ActionProcessor.action">4</intProp>
+              <intProp name="ActionProcessor.target">0</intProp>
+              <stringProp name="ActionProcessor.duration">0</stringProp>
+            </TestAction>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Register Select" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="script">def xmlRsp = new groovy.xml.XmlSlurper().parseText(vars.get(&quot;SearchResponse&quot;))
+def foundRegister = xmlRsp.Body.OnbisEntitySearchResponse.EntityInfo.Register.text()
+if (foundRegister.contains(&quot;partner&quot;)) {
+	vars.put(&quot;headerRegister&quot;,&quot;partnerentity&quot;)
+} else if (foundRegister.contains(&quot;corp&quot;)) {
+	vars.put(&quot;headerRegister&quot;,&quot;corporationentity&quot;)
+} else {
+	vars.put(&quot;headerRegister&quot;,&quot;businessentity&quot;)
+}
+log.info(&quot;Search for &quot;+vars.get(&quot;eid&quot;)+&quot; successful.\r\n\tRegister = &quot;+foundRegister+&quot; --&gt; &quot;+vars.get(&quot;headerRegister&quot;))
+
+// first maybe log how many
+
+// consider arraylist for the register, so if there is more than one we can try multiple registers.
+// props.put(&quot;mylist&quot;, new ArrayList())
+// props.get(&quot;mylist&quot;).add(&lt;some value&gt;)
+// log.info(props.get(&quot;mylist&quot;).toString())</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Pause" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">${__P(notesPauseTime)}</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Data Check" enabled="false">
+            <boolProp name="displayJMeterProperties">false</boolProp>
+            <boolProp name="displayJMeterVariables">true</boolProp>
+            <boolProp name="displaySystemProperties">false</boolProp>
+          </DebugSampler>
+          <hashTree/>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="SOAP AddFileNotes" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:onb=&quot;http://com.fostermoore.catalyst/service/onbis&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;onb:OnbisAddFileNotesRequest&gt;&#xd;
+         &lt;onb:Title&gt;${notesTitle}&lt;/onb:Title&gt;&#xd;
+         &lt;onb:Comment&gt;${notesComment}&lt;/onb:Comment&gt;&#xd;
+         &lt;onb:Tags&gt;${notesTags}&lt;/onb:Tags&gt;&#xd;
+         &lt;onb:EntityIdentifier&gt;${eid}&lt;/onb:EntityIdentifier&gt;&#xd;
+      &lt;/onb:OnbisAddFileNotesRequest&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${serverIntra}</stringProp>
+            <stringProp name="HTTPSampler.port">${portEnv}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">${pathUrlIntra}/OnbisAddFileNotes${serviceSuffix}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">${__threadNum} or ${entityInCsv} can be appended to the Name if you want to track with high granularity (though bad for gathering statistics and graphs)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager - Intra ID" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-IBM-Client-Id" elementType="Header">
+                  <stringProp name="Header.name">X-IBM-Client-Id</stringProp>
+                  <stringProp name="Header.value">${__P(ibmClientId)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip,deflate,br</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Apache-HttpClient/4.5.2 (Java/17.0.5)</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">${headerRegister}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Log Entry - JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters">${scriptPath}</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">log.info(&quot;message sent to &quot;+sampler.getPath())
+//========= OVERALL LOGGING ===========
+def fullPath = props.get(&quot;dataFileCsv&quot;) 
+def fileName = new File(fullPath).getName()  // get filename with extension 
+def dataFileNoExt = fileName.lastIndexOf(&apos;.&apos;) ? fileName.substring(0, fileName.lastIndexOf(&apos;.&apos;)) : fileName
+//def dataFileNoExt = props.get(&quot;dataFileCsv&quot;).reverse().substring(4).reverse()
+
+def sentListFilePath = &quot;&quot;+props.get(&quot;scriptPath&quot;)+&quot;/ExecLog-&quot;+dataFileNoExt+&quot;-${tsThisSecond}.csv&quot;
+def csvRow = &quot;&quot;
+def logNoted = false
+def ifFailedWhy = &quot;&quot;
+if (prev.getResponseDataAsString().startsWith(&quot;&lt;&quot;)){
+	log.info(&quot;received data&quot;)
+	def responseXmlHead = new XmlSlurper().parseText(prev.getResponseDataAsString())
+	def xpathStatus = &quot;/Envelope/Body/OnbisAddFileNotesResponse/status&quot;
+	def sentStatus = responseXmlHead.Body.OnbisAddFileNotesResponse.status.text()?:&quot;ERROR&quot;
+	if (sentStatus.equalsIgnoreCase(&quot;success&quot;)){
+		logNoted = true
+	} else {
+		log.warn(&quot;FAILURE on EID=&quot;+vars.get(&quot;eid&quot;)+&quot;:\r\n&quot;+prev.getResponseDataAsString())
+		log.warn(&quot;SENT:\r\n&quot;+prev.getSamplerData())
+		ifFailedWhy = responseXmlHead.errorResponse.moreInformation.text()?:responseXmlHead.Body.OnbisAddFileNotes.errors.error.message.text()
+	}
+	csvRow = &quot;&quot;+vars.get(&quot;callingThread&quot;)+&quot;,&quot;+vars.get(&quot;srcRow&quot;)+&quot;,&quot;+vars.get(&quot;eid&quot;)+&quot;,&quot;+sentStatus+&quot;[&quot;+ifFailedWhy+&quot;]\r\n&quot;
+} else {
+	log.info(&quot;AddFileNotes didn&apos;t run correct. Got the following:\r\n&quot;+prev.getResponseDataAsString())
+	csvRow = &quot;&quot;+vars.get(&quot;callingThread&quot;)+&quot;,&quot;+vars.get(&quot;srcRow&quot;)+&quot;,&quot;+vars.get(&quot;eid&quot;)+&quot;,ERROR[NULL]\r\n&quot;
+}
+
+def sentListfile = new File(sentListFilePath);
+sentListfile.append(csvRow.getBytes());
+
+def entryRecord = vars.get(&quot;eid&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKeyRequestdDate&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKey&quot;)+&quot;\r\n&quot;
+
+if (logNoted){
+	//========= SUCCESS LOGGING ===========
+	def fnp = props.get(&quot;scriptPath&quot;)+&quot;/&quot;+props.get(&quot;logFileSuccess&quot;)
+	def fileNoted = new File(fnp);
+	if (fileNoted.size()&lt;1){
+		log.info(&quot;creating file &quot;+props.get(&quot;logFileSuccess&quot;))
+		fileNoted.delete()
+		fileNoted.createNewFile()
+		fileNoted.text = &quot;This is a list of those EIDs which already have notes added in this environment\r\n&quot;
+	}
+	fileNoted.append(entryRecord)
+	vars.put(&quot;consecutiveFailures&quot;,&quot;0&quot;)
+} else {
+	//========= FAILED LOGGING ===========
+	def fop = props.get(&quot;scriptPath&quot;)+&quot;/&quot;+props.get(&quot;logFileFailures&quot;)
+	def fileOops = new File(fop);
+	def curErrCount = vars.get(&quot;consecutiveFailures&quot;) as Integer
+	if (fileOops.size()&lt;1){
+		log.info(&quot;creating file &quot;+props.get(&quot;logFileFailures&quot;))
+		fileOops.delete()
+		fileOops.createNewFile()
+		fileOops.text = &quot;This is a list of failed EIDs\r\n&quot;
+	}
+	fileOops.append(entryRecord)
+	vars.put(&quot;consecutiveFailures&quot;,(curErrCount+1).toString())
+}
+</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="taskManagement - JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// get the big string of headers, split by lines, and then split into a key-value map
+def listHeaders = prev.getResponseHeaders().split(&apos;\n&apos;)
+def needToWait = false
+for (header in listHeaders){
+	if (header.contains(&quot;Limit-Remaining&quot;)){
+		def vi0 = header.indexOf(&apos;,&apos;)+1
+		def vi1 = header.length()-1
+		def remainingVal = header.substring(vi0,vi1)
+		//log.info(&quot;REMAINING=&quot;+remainingVal)
+		if (remainingVal.isNumber()){
+			if (remainingVal as Integer &lt; 5){
+				//log.info(&quot;&quot;+header)
+				log.info(&quot;Running out of throughput! Pause for 30 seconds&quot;)
+				needToWait = true
+			} else {
+				//log.info(&quot;still OK. &quot;+(remainingVal as Integer).toString()+&quot; remaining&quot;)
+			}
+		}
+	}
+}
+if (needToWait){
+	vars.put(&quot;emergencyPause&quot;,&quot;30000&quot;)
+} else {
+	vars.put(&quot;emergencyPause&quot;,&quot;0&quot;)
+}
+
+def risingCount = vars.get(&quot;sentCount&quot;) as Integer
+if ((props.get(&quot;sendCount&quot;) as Integer) &gt; 0) vars.put(&quot;sentCount&quot;,(risingCount+1).toString())</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="REST AddFileNotes" enabled="false">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#xd;
+&lt;soapenv:Envelope xmlns:soapenv=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot; xmlns:onb=&quot;http://com.fostermoore.catalyst/service/onbis&quot;&gt;&#xd;
+   &lt;soapenv:Header/&gt;&#xd;
+   &lt;soapenv:Body&gt;&#xd;
+      &lt;onb:OnbisAddFileNotesRequest&gt;&#xd;
+         &lt;onb:Title&gt;${notesTitle}&lt;/onb:Title&gt;&#xd;
+         &lt;onb:Comment&gt;${notesComment}&lt;/onb:Comment&gt;&#xd;
+         &lt;onb:Tags&gt;${notesTags}&lt;/onb:Tags&gt;&#xd;
+         &lt;onb:EntityIdentifier&gt;${eid}&lt;/onb:EntityIdentifier&gt;&#xd;
+      &lt;/onb:OnbisAddFileNotesRequest&gt;&#xd;
+   &lt;/soapenv:Body&gt;&#xd;
+&lt;/soapenv:Envelope&gt;</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">${serverIntra}</stringProp>
+            <stringProp name="HTTPSampler.port">${portEnv}</stringProp>
+            <stringProp name="HTTPSampler.protocol">https</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">UTF-8</stringProp>
+            <stringProp name="HTTPSampler.path">${pathUrlIntra}/OnbisAddFileNotes${serviceSuffix}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">${__threadNum} or ${entityInCsv} can be appended to the Name if you want to track with high granularity (though bad for gathering statistics and graphs)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager - Intra ID" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="X-IBM-Client-Id" elementType="Header">
+                  <stringProp name="Header.name">X-IBM-Client-Id</stringProp>
+                  <stringProp name="Header.value">${__P(ibmClientId)}</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip,deflate,br</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">text/xml;charset=UTF-8</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Apache-HttpClient/4.5.2 (Java/17.0.5)</stringProp>
+                </elementProp>
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">SOAPAction</stringProp>
+                  <stringProp name="Header.value">${headerRegister}</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Log Entry - JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters">${scriptPath}</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">log.info(&quot;message sent to &quot;+sampler.getPath())
+//========= OVERALL LOGGING ===========
+def fullPath = props.get(&quot;dataFileCsv&quot;) 
+def fileName = new File(fullPath).getName()  // get filename with extension 
+def dataFileNoExt = fileName.lastIndexOf(&apos;.&apos;) ? fileName.substring(0, fileName.lastIndexOf(&apos;.&apos;)) : fileName
+//def dataFileNoExt = props.get(&quot;dataFileCsv&quot;).reverse().substring(4).reverse()
+
+def sentListFilePath = &quot;&quot;+props.get(&quot;scriptPath&quot;)+&quot;/ExecLog-&quot;+dataFileNoExt+&quot;-${tsThisSecond}.csv&quot;
+def csvRow = &quot;&quot;
+def logNoted = false
+def ifFailedWhy = &quot;&quot;
+if (prev.getResponseDataAsString().startsWith(&quot;&lt;&quot;)){
+	log.info(&quot;received data&quot;)
+	def responseXmlHead = new XmlSlurper().parseText(prev.getResponseDataAsString())
+	def xpathStatus = &quot;/Envelope/Body/OnbisAddFileNotesResponse/status&quot;
+	def sentStatus = responseXmlHead.Body.OnbisAddFileNotesResponse.status.text()?:&quot;ERROR&quot;
+	if (sentStatus.equalsIgnoreCase(&quot;success&quot;)){
+		logNoted = true
+	} else {
+		log.warn(&quot;FAILURE on EID=&quot;+vars.get(&quot;eid&quot;)+&quot;:\r\n&quot;+prev.getResponseDataAsString())
+		log.warn(&quot;SENT:\r\n&quot;+prev.getSamplerData())
+		ifFailedWhy = responseXmlHead.errorResponse.moreInformation.text()?:responseXmlHead.Body.OnbisAddFileNotes.errors.error.message.text()
+	}
+	csvRow = &quot;&quot;+vars.get(&quot;callingThread&quot;)+&quot;,&quot;+vars.get(&quot;srcRow&quot;)+&quot;,&quot;+vars.get(&quot;eid&quot;)+&quot;,&quot;+sentStatus+&quot;[&quot;+ifFailedWhy+&quot;]\r\n&quot;
+} else {
+	log.info(&quot;AddFileNotes didn&apos;t run correct. Got the following:\r\n&quot;+prev.getResponseDataAsString())
+	csvRow = &quot;&quot;+vars.get(&quot;callingThread&quot;)+&quot;,&quot;+vars.get(&quot;srcRow&quot;)+&quot;,&quot;+vars.get(&quot;eid&quot;)+&quot;,ERROR[NULL]\r\n&quot;
+}
+
+def sentListfile = new File(sentListFilePath);
+sentListfile.append(csvRow.getBytes());
+
+def entryRecord = vars.get(&quot;eid&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKeyRequestdDate&quot;)+&quot;+&quot;+vars.get(&quot;CompanyKey&quot;)+&quot;\r\n&quot;
+
+if (logNoted){
+	//========= SUCCESS LOGGING ===========
+	def fnp = props.get(&quot;scriptPath&quot;)+&quot;/&quot;+props.get(&quot;logFileSuccess&quot;)
+	def fileNoted = new File(fnp);
+	if (fileNoted.size()&lt;1){
+		log.info(&quot;creating file &quot;+props.get(&quot;logFileSuccess&quot;))
+		fileNoted.delete()
+		fileNoted.createNewFile()
+		fileNoted.text = &quot;This is a list of those EIDs which already have notes added in this environment\r\n&quot;
+	}
+	fileNoted.append(entryRecord)
+	vars.put(&quot;consecutiveFailures&quot;,&quot;0&quot;)
+} else {
+	//========= FAILED LOGGING ===========
+	def fop = props.get(&quot;scriptPath&quot;)+&quot;/&quot;+props.get(&quot;logFileFailures&quot;)
+	def fileOops = new File(fop);
+	def curErrCount = vars.get(&quot;consecutiveFailures&quot;) as Integer
+	if (fileOops.size()&lt;1){
+		log.info(&quot;creating file &quot;+props.get(&quot;logFileFailures&quot;))
+		fileOops.delete()
+		fileOops.createNewFile()
+		fileOops.text = &quot;This is a list of failed EIDs\r\n&quot;
+	}
+	fileOops.append(entryRecord)
+	vars.put(&quot;consecutiveFailures&quot;,(curErrCount+1).toString())
+}
+</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="taskManagement - JSR223 PostProcessor" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="script">// get the big string of headers, split by lines, and then split into a key-value map
+def listHeaders = prev.getResponseHeaders().split(&apos;\n&apos;)
+def needToWait = false
+for (header in listHeaders){
+	if (header.contains(&quot;Limit-Remaining&quot;)){
+		def vi0 = header.indexOf(&apos;,&apos;)+1
+		def vi1 = header.length()-1
+		def remainingVal = header.substring(vi0,vi1)
+		//log.info(&quot;REMAINING=&quot;+remainingVal)
+		if (remainingVal.isNumber()){
+			if (remainingVal as Integer &lt; 5){
+				//log.info(&quot;&quot;+header)
+				log.info(&quot;Running out of throughput! Pause for 30 seconds&quot;)
+				needToWait = true
+			} else {
+				//log.info(&quot;still OK. &quot;+(remainingVal as Integer).toString()+&quot; remaining&quot;)
+			}
+		}
+	}
+}
+if (needToWait){
+	vars.put(&quot;emergencyPause&quot;,&quot;30000&quot;)
+} else {
+	vars.put(&quot;emergencyPause&quot;,&quot;0&quot;)
+}
+
+def risingCount = vars.get(&quot;sentCount&quot;) as Integer
+if ((props.get(&quot;sendCount&quot;) as Integer) &gt; 0) vars.put(&quot;sentCount&quot;,(risingCount+1).toString())</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Pause" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">${emergencyPause}</stringProp>
+          </TestAction>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="Run Silent" enabled="true">
+              <stringProp name="cacheKey">true</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">prev.setIgnore();</stringProp>
+              <stringProp name="scriptLanguage">groovy</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
