@@ -1,10 +1,10 @@
-<a name="obr-document-migration-utility"></a>
-# OBR Document Migration Utility
+<a name="jmeter-in-a-jar"></a>
+# Jmeter in a JAR
 
 Technologies used: Maven, Apache JMeter
 
 <!-- TOC -->
-* [OBR Document Migration Utility](#obr-document-migration-utility)
+* [JMater in a Jar](#jmeter-in-a-jar)
   * [Requirements](#requirements)
   * [Functionality](#functionality)
   * [Running the app](#running-the-app)
@@ -22,9 +22,8 @@ Java8 or later is installed on the system where the utility is executed.
 <a name="functionality"></a>
 ## Functionality
 
-This application will send SOAP messages to the AddFileNotes API of a specified environment.
-Each message is a record of company key provision, dated before the AddFileNotes API went live.
-This is to ensure that every Company Key provisioning (including the ones before File Notes were possible) has a corresponding File Note.
+This application will send SOAP messages to a specified environment.
+This is made so that a single JAR file can be used to perform batch operations, with an embedded Jmeter instance.
 
 The method by which this application sends these messages is:
 - create a temporary folder for the SOAP sending libraries (this application uses the Apache JMeter libraries as its engine; leveraging industry standard technology)
