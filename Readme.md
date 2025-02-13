@@ -4,7 +4,7 @@
 Technologies used: Maven, Apache JMeter
 
 <!-- TOC -->
-* [JMater in a Jar](#jmeter-in-a-jar)
+* [JMeter in a Jar](#jmeter-in-a-jar)
   * [Requirements](#requirements)
   * [Functionality](#functionality)
   * [Running the app](#running-the-app)
