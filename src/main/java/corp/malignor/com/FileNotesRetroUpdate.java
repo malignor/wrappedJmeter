@@ -1,4 +1,4 @@
-package gov.on.mpbsd;
+package corp.malignor.com;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
